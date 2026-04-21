@@ -19,25 +19,24 @@ int main(){
         printf("\nEnter your option: ");
         scanf("%d",&input);
         printf("\n\n");
-        if(input==1){
-            
-            printf("\n\n");
-            count++;
-        }
-        else if(input==2){
 
-            printf("\n\n");
-        }
-        else if(input==3){
-            printf("Current Book amount is:%d",count);
-            printf("\n\n");
-        }
-        else if(input==4){
+        switch (input)
+        {
+        case 1:
+            // Code to add a book
+            break;
+        case 2:
+            // Code to search a book
+            break;
+        case 3:
+            // Code to count books
+            break;
+        case 4:
+            printf("Exiting the program...\n");
             exit(0);
-        }
-        else{
-            printf("Wrong Input\n");
-            printf("\n\n");
+        default:
+            printf("Invalid option. Please try again.\n");
+            break;
         }
         
     }
