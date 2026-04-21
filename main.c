@@ -6,6 +6,13 @@
 
 int main(){
     int input=0,count=0;
+    
+    struct Book {
+        char title[100];
+        char author[100];
+    };
+
+    struct Book books[100]; // Array to store books
 
     while(1){
         printf("----------Welcome to Sylhet Engineering College Library----------\n");
@@ -24,12 +31,36 @@ int main(){
         {
         case 1:
             // Code to add a book
+            printf("Enter the title of the book: ");
+            scanf(" %[^\n]s", books[count].title); // Read the title with spaces
+            printf("Enter the author of the book: ");
+            scanf(" %[^\n]s", books[count].author); // Read the author with spaces
+            printf("Added a book\n");
+            count++;
+            printf("\n");
             break;
         case 2:
             // Code to search a book
+            char searchTitle[100];
+            printf("Enter the title of the book to search: ");
+            scanf(" %[^\n]s", searchTitle); // Read the search title with spaces
+            int found = 0;
+            for (int i = 0; i < count; i++) {
+                if (strcmp(books[i].title, searchTitle) == 0) {
+                    printf("Book found: %s by %s\n", books[i].title, books[i].author);
+                    found = 1;
+                    break;
+                }
+            }
+            if (!found) {
+                printf("Book not found.\n");
+            }
+            printf("\n");
             break;
         case 3:
             // Code to count books
+            printf("Total number of books: %d\n", count);
+            printf("\n");
             break;
         case 4:
             printf("Exiting the program...\n");
