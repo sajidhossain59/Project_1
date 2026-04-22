@@ -19,7 +19,7 @@ int main(){
         printf("\n\n");
         printf("Enter an option\n");
         printf("\n1. Add a book\n");
-        printf("\n2. Search a book\n");
+        printf("\n2. Search a book using its title\n");
         printf("\n3. Count book\n");
         printf("\n4. Remove a book\n");
         printf("\n5. Show all available books\n");
