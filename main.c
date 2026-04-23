@@ -66,14 +66,22 @@ int main(){
             char auth[50];
             printf("Enter Author's name:");
             scanf(" %[^\n]",auth);
+            printf("\n");
             for(int i=0;i<count;i++){
                 if(strcmp(books[i].author,auth)==0){
-                    printf("%d. %s\n",i,books[i].title);
                     tag=1;
                 }
             }
             if(!tag){
                 printf("No book available by %s.\n",auth);
+            }
+            else{
+                printf("====== Available Books by %s ======\n",auth);
+                for(int i=0;i<count;i++){
+                    if(strcmp(books[i].author,auth)==0){
+                        printf("%d. %s\n",i+1,books[i].title);
+                    }
+                }
             }
             break;
             
