@@ -20,10 +20,11 @@ int main(){
         printf("Enter an option\n");
         printf("\n1. Add a book\n");
         printf("\n2. Search a book using its title\n");
-        printf("\n3. Count book\n");
-        printf("\n4. Remove a book\n");
-        printf("\n5. Show all available books\n");
-        printf("\n6. Exit\n");\
+        printf("\n3. Search a book using its author\n");
+        printf("\n4. Count books\n");
+        printf("\n5. Remove a book\n");
+        printf("\n6. Show all available books\n");
+        printf("\n7. Exit\n");
         printf("\n----------------------------------\n");
         printf("\nEnter your option: ");
         scanf("%d",&input);
@@ -60,11 +61,13 @@ int main(){
             printf("\n");
             break;
         case 3:
+            // code to search by author
+        case 4:
             // Code to count books
             printf("Total number of books: %d\n", count);
             printf("\n");
             break;
-        case 4:
+        case 5:
             int got=0;
             char search[100];
             printf("Enter the name of book to remove:");
@@ -87,7 +90,7 @@ int main(){
                 printf("Book not found.\n");
             }
             break;
-        case 5:
+        case 6:
             // Show all available books
             if (count == 0) {
                 printf("No books available in the library.\n");
@@ -101,7 +104,7 @@ int main(){
             }
             printf("\n");
             break; 
-        case 6:
+        case 7:
             printf("Exiting the program...\n");
             exit(0);
         default:
