@@ -20,7 +20,7 @@ int main(){
         printf("Enter an option\n");
         printf("\n1. Add a book\n");
         printf("\n2. Search a book using its title\n");
-        printf("\n3. Search a book using its author\n");
+        printf("\n3. Show available books by Author\n");
         printf("\n4. Count books\n");
         printf("\n5. Remove a book\n");
         printf("\n6. Show all available books\n");
@@ -77,9 +77,12 @@ int main(){
             }
             else{
                 printf("====== Available Books by %s ======\n",auth);
+                int j=1;
                 for(int i=0;i<count;i++){
                     if(strcmp(books[i].author,auth)==0){
-                        printf("%d. %s\n",i+1,books[i].title);
+                        
+                        printf("%d. %s\n",j,books[i].title);
+                        j++;
                     }
                 }
             }
