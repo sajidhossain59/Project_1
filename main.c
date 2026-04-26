@@ -15,6 +15,7 @@ int main(){
     struct Book books[100]; // Array to store books
 
     while(1){
+        here:
         printf("----------Welcome to Sylhet Engineering College Library----------\n");
         printf("\n\n");
         printf("Enter an option\n");
@@ -27,7 +28,11 @@ int main(){
         printf("\n7. Exit\n");
         printf("\n----------------------------------\n");
         printf("\nEnter your option: ");
-        scanf("%d",&input);
+        if(scanf("%d",&input) != 1){
+            printf("Invalid option. Please try again.\n\n");
+            while(getchar() != '\n');
+            goto here;
+        }
         printf("\n\n");
 
         switch (input)
@@ -38,7 +43,7 @@ int main(){
             scanf(" %[^\n]s", books[count].title); // Read the title with spaces
             printf("Enter the author of the book: ");
             scanf(" %[^\n]s", books[count].author); // Read the author with spaces
-            printf("Added a book\n");
+            printf("\n\"%s\" by %s is added successfully\n",books[count].title,books[count].author);
             count++;
             printf("\n");
             break;
