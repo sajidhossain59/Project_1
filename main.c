@@ -107,6 +107,7 @@ int main(){
         }
         case 5:
         {
+            // Code to remove a book using name
             int got=0;
             char search[100];
             printf("Enter the name of book to remove:");
