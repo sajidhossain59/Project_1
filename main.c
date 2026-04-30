@@ -38,6 +38,7 @@ int main(){
         switch (input)
         {
         case 1:
+        {
             // Code to add a book
             printf("Enter the title of the book: ");
             scanf(" %[^\n]s", books[count].title); // Read the title with spaces
@@ -47,7 +48,9 @@ int main(){
             count++;
             printf("\n");
             break;
+        }
         case 2:
+        {
             // Code to search a book
             int found=0;
             char searchTitle[100];
@@ -65,7 +68,9 @@ int main(){
             }
             printf("\n");
             break;
+        }
         case 3:
+        {
             // code to search by author
             int tag=0;
             char auth[50];
@@ -92,13 +97,16 @@ int main(){
                 }
             }
             break;
-            
+        }
         case 4:
+        {
             // Code to count books
             printf("Total number of books: %d\n", count);
             printf("\n");
             break;
+        }
         case 5:
+        {
             int got=0;
             char search[100];
             printf("Enter the name of book to remove:");
@@ -121,7 +129,9 @@ int main(){
                 printf("Book not found.\n");
             }
             break;
+        }
         case 6:
+        {
             // Show all available books
             if (count == 0) {
                 printf("No books available in the library.\n");
@@ -134,13 +144,18 @@ int main(){
                 }
             }
             printf("\n");
-            break; 
+            break;
+        } 
         case 7:
+        {
             printf("Exiting the program...\n");
             exit(0);
+        }
         default:
+        {
             printf("Invalid option. Please try again.\n");
             break;
+        }
         }
         
     }
