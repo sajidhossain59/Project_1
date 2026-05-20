@@ -12,7 +12,7 @@ int main(){
         char author[100];
     };
 
-    struct Book books[100]; // Array to store books
+    struct Book books[100];
 
     while(1){
         here:
@@ -39,7 +39,6 @@ int main(){
         {
         case 1:
         {
-            // Code to add a book
             printf("Enter the title of the book: ");
             scanf(" %[^\n]s", books[count].title); // Read the title with spaces
             printf("Enter the author of the book: ");
@@ -51,11 +50,10 @@ int main(){
         }
         case 2:
         {
-            // Code to search a book
             int found=0;
             char searchTitle[100];
             printf("Enter the title of the book to search: ");
-            scanf(" %[^\n]s", searchTitle); // Read the search title with spaces
+            scanf(" %[^\n]s", searchTitle);
             for (int i = 0; i < count; i++) {
                 if (strcmp(books[i].title, searchTitle) == 0) {
                     printf("Book found: %s by %s\n", books[i].title, books[i].author);
@@ -71,7 +69,6 @@ int main(){
         }
         case 3:
         {
-            // code to search by author
             int tag=0;
             char auth[50];
             printf("Enter Author's name:");
@@ -100,21 +97,19 @@ int main(){
         }
         case 4:
         {
-            // Code to count books
             printf("Total number of books: %d\n", count);
             printf("\n");
             break;
         }
         case 5:
         {
-            // Code to remove a book using name
+
             int got=0;
             char search[100];
             printf("Enter the name of book to remove:");
             scanf(" %[^\n]",search);
             for (int i = 0; i < count; i++) {
             if (strcmp(books[i].title, search) == 0) {
-            // Shift all subsequent books left by one position
             for (int j = i; j < count - 1; j++) {
                 strcpy(books[j].title, books[j + 1].title);
                 strcpy(books[j].author, books[j + 1].author);
