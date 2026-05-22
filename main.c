@@ -40,9 +40,9 @@ int main(){
         case 1:
         {
             printf("Enter the title of the book: ");
-            scanf(" %[^\n]s", books[count].title); // Read the title with spaces
+            scanf(" %[^\n]", books[count].title); // Read the title with spaces
             printf("Enter the author of the book: ");
-            scanf(" %[^\n]s", books[count].author); // Read the author with spaces
+            scanf(" %[^\n]", books[count].author); // Read the author with spaces
             printf("\n\"%s\" by %s is added successfully\n",books[count].title,books[count].author);
             count++;
             printf("\n");
@@ -53,7 +53,7 @@ int main(){
             int found=0;
             char searchTitle[100];
             printf("Enter the title of the book to search: ");
-            scanf(" %[^\n]s", searchTitle);
+            scanf(" %[^\n]", searchTitle);
             for (int i = 0; i < count; i++) {
                 if (strcmp(books[i].title, searchTitle) == 0) {
                     printf("Book found: %s by %s\n", books[i].title, books[i].author);
@@ -103,7 +103,7 @@ int main(){
         }
         case 5:
         {
-
+            // Search for a book
             int got=0;
             char search[100];
             printf("Enter the name of book to remove:");
@@ -128,7 +128,7 @@ int main(){
         }
         case 6:
         {
-            // Show all available books
+            // Shows all available books
             if (count == 0) {
                 printf("No books available in the library.\n");
             } else {
