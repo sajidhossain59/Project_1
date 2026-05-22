@@ -69,6 +69,7 @@ int main(){
         }
         case 3:
         {
+            // Search using Authors name
             int tag=0;
             char auth[50];
             printf("Enter Author's name:");
