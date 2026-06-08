@@ -58,9 +58,9 @@ int main(){
             /* ============ ADD BOOK ============ */
 
             printf("Enter the title of the book: ");
-            scanf(" %[^\n]s", books[count].title);
+            scanf(" %[^\n]", books[count].title);
             printf("Enter the author of the book: ");
-            scanf(" %[^\n]s", books[count].author);
+            scanf(" %[^\n]", books[count].author);
             printf("\n\"%s\" by %s is added successfully\n",
             books[count].title,
             books[count].author);
