@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SEC Library Management System 📚
 
 A lightweight, console-based Library Management System written in **C**. This application allows users to manage a book catalog efficiently using an in-memory database (structures) coupled with persistent storage via a plain text file.
